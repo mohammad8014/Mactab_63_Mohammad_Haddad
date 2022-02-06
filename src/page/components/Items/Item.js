@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
  function Item() {
   return <> 
 
-    <Navigation></Navigation>
+    {/* <Navigation></Navigation> */}
     <br/>
     <Link to='/CategoriesPage' > محصول فلان </Link>
   </>;

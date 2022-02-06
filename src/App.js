@@ -6,7 +6,6 @@ import { CategoriesPage } from 'page';
 import { HomePage } from 'page';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-// import './assets/styles/';
 
 const App = () => {
     return ( 
@@ -17,10 +16,10 @@ const App = () => {
             <Route path='/ProductPage' element={<ProductPage/>} />
             <Route path='/controlpanel' element={<PanelPage/>} />
             <Route path='/' element={<HomePage/>} />
-
-           
         </Routes>
-     );
+
+     
+    );
 }
- 
+
 export default App;

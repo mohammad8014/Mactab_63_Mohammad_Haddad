@@ -1,50 +1,49 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styles from './Login.module.css';
-import logo from '../../assets/img/logo-1643824651915.png';
+import { useState, useRef } from "react";
 
-export default function LoginPage() {
+import { Link,useNavigate } from 'react-router-dom';
+// import styles from './Login.module.css';
+import data from "../../db.json";
+
+function LoginPage() {
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
+  const [err , setError] = useState("")
+
+  const navigator = useNavigate()
+
+  function login() {
+    data.users.map((item) => {
+      if (
+        item.username === emailRef.current.value &&
+        item.password === passwordRef.current.value
+      ) {
+        navigator(`/PanelPage`);
+      } else {
+        setError('لطفا فیلد هارا به درستی پر کنید')
+      }
+    });
+  }
+
   return (
-    <>
-      <div className=" mx-auto max-w-6xl p-12">
-      <div className="text-center w-full bg-red-300 flex-shrink-0">
-                <img
-                  className="h-8 "
-                  src={logo}
-                  alt="Workflow"
-                />
-              </div>
-        <div className="flex items-center justify-center">
-
-          <div className="md:w-1/2   mt-5 md:justify-end w-full md:w-1/2 ">
-            <div className="shadow-lg  mx-auto  max-w-sm p-10 pb-20">
-
-
-
-              <div className="w-full">
-                <div className="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"><span className="text-red-400 mr-1">*</span> نام کاربری</div>
-                <div className="my-2 bg-white p-1 flex border border-gray-200 rounded">  <input placeholder="" className="p-1 px-2 appearance-none outline-none w-full text-gray-800" />  </div>
-              </div>
-
-              <div className="w-full">
-                <div className="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"><span className="text-red-400 mr-1">*</span> رمز عبور</div>
-                <div className="my-2 bg-white p-1 flex border border-gray-200 rounded">  <input placeholder="jhon@doe.com" className="p-1 px-2 appearance-none outline-none w-full text-gray-800" />  </div>
-              </div>
-              <div className="mt-6 relative">
-                <div className="shadow-md font-medium py-2 px-4 text-green-100
-                  cursor-pointer bg-teal-600 rounded text-lg tr-mt  absolute text-center w-full">ورود</div>
-              </div>
-              
-
-
-            </div>
-            <Link className='text-red-300' to='/'>بازگشت به صفحه اصلی</Link>
-          </div>
-        </div>
+    <div className="  bg-white p-10 shadow-xl rounded-xl shadow-slate-400/30 max-w-sm mx-auto gap-4 flex flex-col mt-32">
+        <p className='text-center text-red-500'>{err}</p>
+      <div className="flex flex-col gap-2">
+        <label htmlFor="username">نام کاربری</label>
+        <input ref={emailRef} type={"text"} className=" rounded w-full border py-2 px-4  ring-emerald-200 duration-200" />
       </div>
-    </>
+      <div className="flex flex-col gap-2">
+        <label htmlFor="password">رمز عبور</label>
+        <input ref={passwordRef} type={"text"} className=" rounded w-full border py-2 px-4  ring-emerald-200 duration-200" />
+      </div>
+
+      <button onClick={login} className="mt-2 w-full cursor-pointer rounded active:scale-90 duration-200 bg-blue-500 py-2 px-4 text-center font-medium text-green-100 shadow-md">
+        ورود
+      </button>
+    </div>
   );
-}
+};
+
+export  {LoginPage};
 
 
 
@@ -57,4 +56,3 @@ export default function LoginPage() {
 
 
 
-export { LoginPage };

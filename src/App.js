@@ -7,6 +7,9 @@ import { HomePage } from 'page';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
+
+
+
 const App = () => {
     return ( 
         <Routes>
@@ -14,7 +17,7 @@ const App = () => {
             <Route path='/CartPage' element={<CartPage/>} />
             <Route path='/CategoriesPage' element={<CategoriesPage/>} />
             <Route path='/ProductPage' element={<ProductPage/>} />
-            <Route path='/controlpanel' element={<PanelPage/>} />
+            <Route path='/PanelPage' element={<PanelPage/>} />
             <Route path='/' element={<HomePage/>} />
         </Routes>
 

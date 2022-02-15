@@ -6,7 +6,6 @@ function CategoriesPage() {
     return <>
     <Navigation></Navigation>
     <SideCategries/>
-        <h1>دسته بندی ها</h1>
 
     </>;
 }

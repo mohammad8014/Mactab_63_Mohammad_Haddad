@@ -1,20 +1,17 @@
-import { Header } from 'layout';
-import { Item } from 'page';
+import { FooterComponent, Header } from 'layout';
+// import Item from 'page/components/Items/Item';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 function HomePage() {
   return <>
     <Header></Header> 
-    <br/>
-    <Link to='/CategoriesPage' >محصولات اپل</Link>
-    <br/>
+    {/* <Link to='/CategoriesPage' >محصولات اپل</Link> */}
 
-    <Item></Item>
-    <h1>Home</h1>
-    <h1 className="text-3xl text-red-400 font-bold underline">
-      Hello world!
-    </h1>
+    {/* <Item></Item> */}
+
+
+      <FooterComponent></FooterComponent>
   </>;
 }
 

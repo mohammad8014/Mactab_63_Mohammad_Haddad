@@ -11,7 +11,7 @@ function Navigation() {
   return <>
 
     <div>
-      <nav className={`bg-gray-300 ${styles.container} `}>
+      <nav className={` bg-gray-300 ${styles.container} `}>
         <div className="max-w-9xl  px-4  ">
           <div className="flex items-center justify-between h-14">
             <div className="flex w-full items-center">
@@ -158,7 +158,7 @@ function Navigation() {
 
 
 
-
+git
 
 
 

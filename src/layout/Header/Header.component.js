@@ -34,10 +34,10 @@ function Header() {
     <ReactSlidy doAfterSlide={updateSlide} slide={actualSlide}>
       {SLIDES.map(src => (
         <header className=' bg-red-300 w-full h-auto '>
-          <div>
+          <div className="h-96">
             <h1 className='text-end text-5xl font-extrabold absolute inset-y-1/2  inset-x-2/3 text-white-300 z-10'> فروشگاه آنلاین سناتور</h1>
             <p className='text-end text-5xl font-extrabold mt-10 mr-16 text-2xl  absolute inset-y-1/2  inset-x-2/3 text-white-300 z-10'> جدید ترین لپتاب های روز دنیا با بهترین قیمت</p>
-            <img className={`relative  h-16 ${styles.imgHeader}`} key={src} src={src} />
+            <img className={`relative   ${styles.imgHeader}`} key={src} src={src} />
           </div>
 
 

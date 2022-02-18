@@ -49,11 +49,14 @@ function Navigation() {
               </div>
 
               <div className="flex-shrink-0">
+              {<Link to='/'>
                 <img
                   className="h-8 "
                   src={logo}
                   alt="Workflow"
                 />
+              </Link>}
+               
               </div>
             </div>
 
@@ -158,7 +161,7 @@ function Navigation() {
 
 
 
-git
+
 
 
 

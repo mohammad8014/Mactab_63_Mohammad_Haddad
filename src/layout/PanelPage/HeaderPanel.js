@@ -34,11 +34,13 @@ export default function HeaderPanel() {
                                 </div>
 
                                 <div className="flex-shrink-0 flex">
-                                    <img
-                                        className="h-8 "
-                                        src={logo}
-                                        alt="Workflow"
-                                    />
+                                    {<Link to='/PanelPage'>
+                                        <img
+                                            className="h-8 "
+                                            src={logo}
+                                            alt="Workflow"
+                                        />
+                                    </Link>}
                                 </div>
                             </div>
 
@@ -117,10 +119,10 @@ export default function HeaderPanel() {
                                         <div className=' '>
                                             <span className='border border-slate-300 hover:border-indigo-300 cursor-pointer text-black bg-white py-1 px-4'>کالاها</span>
 
-                                                <span className='border border-slate-300 hover:border-indigo-300 cursor-pointer text-black bg-white py-1 px-4'>موجودی و قیمت ها</span>
-                                                <span className='border border-slate-300 hover:border-indigo-300 cursor-pointer text-black bg-white py-1 px-4'>سفارش ها</span>
+                                            <span className='border border-slate-300 hover:border-indigo-300 cursor-pointer text-black bg-white py-1 px-4'>موجودی و قیمت ها</span>
+                                            <span className='border border-slate-300 hover:border-indigo-300 cursor-pointer text-black bg-white py-1 px-4'>سفارش ها</span>
 
-                                            </div>
+                                        </div>
 
                                     </div>
 

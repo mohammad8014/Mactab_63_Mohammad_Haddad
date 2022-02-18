@@ -19,7 +19,7 @@ export default class Card extends Component {
                         Laptop
                     </td>
                     <td className="text-center py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                        {this.props.data.title}
+                        {this.props.data.namKala}
                     </td>
 
                 </tr>

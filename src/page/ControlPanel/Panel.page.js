@@ -31,7 +31,7 @@ class PanelPage extends Component {
 
         })
 
-        fetch("https://6182355884c2020017d89d14.mockapi.io/api/v1/courses")
+        fetch("https://61895f90d0821900178d7971.mockapi.io/todos")
             .then(res => res.json())
             .then(
                 (result) => {

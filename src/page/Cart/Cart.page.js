@@ -2,11 +2,13 @@ import { Navigation } from 'coponents/Navigation/Navigation';
 
 import { FooterComponent } from 'layout';
 import React from 'react';
+import { Link } from 'react-router-dom'
+
 
 function CartPage() {
   return (<>
     <Navigation></Navigation>
-    <div className="container   p-8 mx-auto mt-12 bg-white">
+    <div className="container   p-8 mx-auto mt-14 bg-white">
       <div className="w-full bg-gray-300 overflow-x-auto">
         <div className="my-2">
         </div>
@@ -116,17 +118,9 @@ function CartPage() {
         </table>
         <div className="flex justify-end mt-4 space-x-2">
        
-          <button
-            className="
-              px-6
-              py-3
-              text-sm text-white
-              bg-indigo-500
-              hover:bg-indigo-600
-            "
-          >
+          <Link to='/ProductPage' className=" px-6 py-3 text-sm text-white bg-indigo-500 hover:bg-indigo-600">
             نهایی کردن سبد خرید
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -5,13 +5,16 @@ import React, { useState } from 'react';
 
 import ReactSlidy from 'react-slidy';
 
-import laptoplogo from '../../assets/img/ebay-laptooppmf_QoxDYe5.jpg';
+import headerimage from '../../assets/img/headerimage.jpg';
+import headermobile from '../../assets/img/mobile.jpg';
+import headerwatch from '../../assets/img/watch.png';
+
 
 
 
 import 'react-slidy/lib/styles.css';
 
-const SLIDES = [laptoplogo, laptoplogo, laptoplogo, laptoplogo]
+const SLIDES = [headerimage, headermobile, headerwatch]
 
 const createStyles = isActive => ({
   background: 'transparent',
@@ -33,10 +36,10 @@ function Header() {
 
     <ReactSlidy doAfterSlide={updateSlide} slide={actualSlide}>
       {SLIDES.map(src => (
-        <header className=' bg-red-300 w-full h-auto '>
+        <header className='  w-full h-auto '>
           <div className="h-96">
-            <h1 className='text-end text-5xl font-extrabold absolute inset-y-1/2  inset-x-2/3 text-white-300 z-10'> فروشگاه آنلاین سناتور</h1>
-            <p className='text-end text-5xl font-extrabold mt-10 mr-16 text-2xl  absolute inset-y-1/2  inset-x-2/3 text-white-300 z-10'> جدید ترین لپتاب های روز دنیا با بهترین قیمت</p>
+            {/* <h1 className='text-en text-5xl font-extrabold absolute inset-y-1/2  inset-x-2/3 text-white-300 z-10'> فروشگاه آنلاین سناتور</h1> */}
+            {/* <p className='text-end text-5xl font-extrabold mt-10 mr-16 text-2xl  absolute inset-y-1/2  inset-x-2/3 text-white-300 z-10'> جدید ترین لپتاب های روز دنیا با بهترین قیمت</p> */}
             <img className={`relative   ${styles.imgHeader}`} key={src} src={src} />
           </div>
 

@@ -1,0 +1,79 @@
+.clip-path{
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+.dir-r {
+    direction: rtl !important;
+}
+@font-face {
+    font-family: font;
+    src: url(../Fonts/ttf/IRANSansWeb.ttf);
+}
+html {
+    font-family: "font" !important;
+}
+*:not(i) {
+    font-family: "font" !important;
+}
+.tbody tr:nth-child(2n) {
+    background-color: rgba(250, 240, 240, 0.788);
+}
+.grid-cate {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+.modal-bg {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0 , 0, .7);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+}
+.form-post input {
+    margin-right: .5vw;
+    border: 1px solid green;
+    padding: .7vh .5vw;
+    border-radius: .2rem;
+}
+
+.form-post {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 35px;
+    position: relative;
+}
+.form-post i {
+    position: absolute;
+    left: 1vw;
+    top: 1vh;
+    font-size: 1.5rem;
+    color: red;
+    cursor: pointer;
+}
+.p-footer {
+    height: 30vh !important;
+}
+.table-img {
+    width: 6rem;
+    height: 6rem;
+    display: inline;
+}
+.counter {
+    position: absolute;
+    color: rgb(224, 18, 18);
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    font-size: 1.2rem;
+}

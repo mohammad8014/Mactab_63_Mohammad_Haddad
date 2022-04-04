@@ -44,7 +44,7 @@ function LoginPage(props) {
   };
 
   return (
-    <div className='  bg-white p-10 shadow-xl rounded-xl shadow-slate-400/30 max-w-sm mx-auto gap-4 flex flex-col mt-32'>
+    <div className='  bg-blue-300 p-10 shadow-xl rounded-xl shadow-slate-400/30 max-w-sm mx-auto gap-4 flex flex-col mt-32'>
       <p className='text-center text-red-500'>{error}</p>
       <div className='flex flex-col gap-2'>
         <label htmlFor='username'>نام کاربری</label>
@@ -71,7 +71,7 @@ function LoginPage(props) {
       >
         ورود
       </button>
-      <Link className='text-blue-300' to='/'>
+      <Link className='text-white-300' to='/'>
         {" "}
         بازگشت به صفحه اصلی
       </Link>

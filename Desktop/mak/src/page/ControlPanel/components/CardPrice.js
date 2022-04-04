@@ -13,7 +13,7 @@ export default class CardPrice extends Component {
                         {this.props.data.price}
                     </td>
                     <td className="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                        خاکستری
+                        {this.props.data.color}
                     </td>
                     <td className="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
                         {this.props.data.category}

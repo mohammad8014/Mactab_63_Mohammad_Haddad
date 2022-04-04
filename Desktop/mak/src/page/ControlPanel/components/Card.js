@@ -19,7 +19,7 @@ export default class Card extends Component {
                         <span className="underline decoration-sky-600 hover:decoration-blue-400 hover:cursor:po ml-2 cursor-pointer text-blue-600/75" onClick={this.editHandler}>ویرایش</span><span className="underline decoration-sky-600 hover:decoration-blue-400 hover:cursor:po ml-2 cursor-pointer text-blue-600/75" onClick={this.delHandler}>حذف</span>
                     </td>
                     <td className="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                        خاکستری
+                        {this.props.data.color}
                     </td>
                     <td className="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
                         {this.props.data.category}

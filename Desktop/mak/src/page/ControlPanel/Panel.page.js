@@ -10,6 +10,7 @@ import { Pagination } from 'antd';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 
+// validation
 
 
 import PanelOrder from './components/PanelOrder';
@@ -36,8 +37,23 @@ class PanelPage extends Component {
             activePage: "items",
             orders: [],
             token: "",
-            delModal: false
+            delModal: false,
+
+        // state for validation
+            errors : {
+                product : "",
+                brand : "",
+                color : "",
+                count : "",
+                price : ""
+            }
+
         }
+
+
+  
+
+
         this.itemName = React.createRef();
         this.itemCate = React.createRef();
         this.itemBrand = React.createRef();
@@ -49,6 +65,79 @@ class PanelPage extends Component {
         this.changePageHandler = this.changePageHandler.bind()
     }
 
+
+    // function from onchange fields
+    validateProduct = (event) => {
+        let validProduct = /^[A-Za-zآ-ی]{2,}(\s{0,})?$/;
+
+        if(!validProduct.test(event.target.value)) {
+            this.setState(this.state.errors = {
+                product : "تعداد کاراکتر کافی نیست ",
+            })
+        } else{
+            this.setState(this.state.errors = {
+                product : "",
+            })
+        }
+    }
+
+    validateBrand = (event) => {
+        let validBrand = /^[A-Za-zآ-ی]{2,}(\s{0,})?$/;
+
+        if(!validBrand.test(event.target.value)) {
+            this.setState(this.state.errors = {
+                brand : "تعداد کاراکتر کافی نیست  ",
+            })
+        } else{
+            this.setState(this.state.errors = {
+                brand : "",
+            })
+        }
+    }
+
+
+    validateColor = (event) => {
+        let validColor = /^[A-Za-zآ-ی]{2,}(\s{0,})?$/;
+
+        if(!validColor.test(event.target.value)) {
+            this.setState(this.state.errors = {
+                color : "تعداد کاراکتر کافی نیست   ",
+            })
+        } else{
+            this.setState(this.state.errors = {
+                color : "",
+            })
+        }
+    }
+
+    validateCount = (event) => {
+        let validCount =  /^[0-9]{2,10}$/;
+
+        if(!validCount.test(event.target.value)) {
+            this.setState(this.state.errors = {
+                count : "تعداد کاراکتر کافی نیست    ",
+            })
+        } else{
+            this.setState(this.state.errors = {
+                count : "",
+            })
+        }
+    }
+
+
+    validatePrice = (event) => {
+        let validPrice = /^[0-9]{3,20}([,/]{0,7})?([0-9]{3,20})?([,/]{0,7})?([0-9]{3,20})?$/;
+
+        if(!validPrice.test(event.target.value)) {
+            this.setState(this.state.errors = {
+                price : "تعداد کاراکتر کافی نیست     ",
+            })
+        } else{
+            this.setState(this.state.errors = {
+                price : "",
+            })
+        }
+    }
 
 
     componentDidMount() {
@@ -299,7 +388,8 @@ class PanelPage extends Component {
                                     <i class="las la-times" onClick={this.closeModalI}></i>
                                     <label>
                                         نام کالا :
-                                        <input ref={this.itemName} />
+                                        <input  className={this.state.errors.product ? 'errorClass' : '' } onChange={this.validateProduct} ref={this.itemName} />
+                                         {/* {this.state.errors.product ? <span>no error</span> : <span> error : {this.state.errors.product}</span>} */}
                                     </label>
                                     <label>
                                         دسته بندی :
@@ -310,20 +400,20 @@ class PanelPage extends Component {
                                         </select>
                                     </label>
                                     <label>
-                                        برند :
-                                        <input ref={this.itemBrand} />
+                                        برند :                                      
+                                        <input className={this.state.errors.brand ? 'errorClass' : '' } onChange={this.validateBrand}  ref={this.itemBrand} />
                                     </label>
                                     <label>
-                                        تعداد :
-                                        <input ref={this.itemCount} />
+                                                           تعداد :                                      
+                                        <input  className={this.state.errors.count ? 'errorClass' : '' } onChange={this.validateCount}  ref={this.itemCount} />
                                     </label>
                                     <label>
                                         رنگ :
-                                        <input ref={this.itemColor} />
+                                        <input  className={this.state.errors.color ? 'errorClass' : '' } onChange={this.validateColor}  ref={this.itemColor} />
                                     </label>
                                     <label>
                                         قیمت :
-                                        <input ref={this.itemPrice} />
+                                        <input  className={this.state.errors.price ? 'errorClass' : '' } onChange={this.validatePrice}  ref={this.itemPrice} />
                                     </label>
                                     <label>
                                         عکس :

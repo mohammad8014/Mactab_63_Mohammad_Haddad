@@ -179,6 +179,20 @@
       "category": "mobile",
       "headerImage": "",
       "id": 32
+    },
+    {
+      "username": "admin",
+      "password": "admin",
+      "firstName": "uuuuuuu",
+      "brand": "jhhhhhhjkl",
+      "thumbnail": "65ddd8b1bbce4d8396b62611147fa1d6",
+      "price": "55555555",
+      "count": "5555555",
+      "color": "jkkkkkkl",
+      "createdAt": 1649316416821,
+      "category": "Laptop",
+      "headerImage": "",
+      "id": 33
     }
   ],
   "category": [
